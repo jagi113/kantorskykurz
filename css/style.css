@@ -3,7 +3,10 @@
 
 /*You can set css variables*/
 :root {
-    --primary-color: #800000
+    --primary-color: #800000;
+    --secondary-color: #6b0101;
+    --dark-color: #5a0000;
+    --light-color: #f4f4f4;
 }
 
 *{
@@ -86,6 +89,7 @@ img{
     background-color: var(--primary-color);
     color: white;
     position: relative;
+    padding-left: 40px;
 }
 
 .showcase h1{
@@ -185,4 +189,9 @@ img{
 .chant .card{
     grid-column-start: 4;
     grid-column-end: 6;
+}
+
+/* Cloud */
+.cloud .grid{
+    grid-template-columns: 4fr 3fr;
 }
