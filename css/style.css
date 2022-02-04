@@ -191,7 +191,55 @@ img{
     grid-column-end: 6;
 }
 
-/* Cloud */
-.cloud .grid{
+/* Spiritual */
+.spiritual .grid{
     grid-template-columns: 4fr 3fr;
+    overflow: hidden;
+}
+
+/* FEASTS */
+.feast .flex{
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.feast .card{
+    padding: 10px 10px 0 10px;
+    width: 150px;
+    transition: 0.2s ease-in;
+}
+
+.feast .card:hover{
+    box-shadow: 0 3px 10px var(--primary-color);
+}
+
+.feast .card div{
+    width: 130px;
+    height: 50px;
+    background-color: var(--primary-color);
+    font-weight: 400;
+    text-align: center;
+    line-height: 90%;
+    color: var(--light-color);
+    display: flex;
+    border-radius: 7px 7px 0 0;
+    margin:0;
+}
+
+
+.feast .card div h4{
+    font-weight: 200;
+    text-align: center;
+    line-height: 90%;
+    color: var(--light-color);
+    margin: auto;
+    align-items: center;
+}
+
+.feast .card img{
+    height: 130px;
+    width: 130px;
+    object-fit: cover;
+    border-radius: 0 0 7px 7px;
+    margin: 0;
 }
