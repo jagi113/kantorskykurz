@@ -201,6 +201,7 @@ img{
 .feast .flex{
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 150px;
 }
 
 .feast .card{
@@ -242,4 +243,9 @@ img{
     object-fit: cover;
     border-radius: 0 0 7px 7px;
     margin: 0;
+}
+
+/* FOOTER */
+.footer .social a{
+    margin: 0 10px;
 }
