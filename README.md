@@ -1,4 +1,4 @@
-## Kantorskykurz
+# Kantorskykurz
 is a website for music and recording of liturgical chant of slovak Greek-catholic eparchy of Košice.
 
 ## Music and recordings
