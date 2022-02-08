@@ -54,79 +54,70 @@
         </div>
     </div>
 
-    <!-- Head -->
-    <section class="oktoich-head bg-primary py-3">
-        <div class="container grid">
-            <div>
-                <h1 class="xl">Oktoich</h1>
-                <p class="lead">
-                    Oktoich alebo osmohlasnik je súbor liturgických nápevov, ktoré boli vytvorené na každý týždeň
-                    obdobia od Paschy do sviatku Zostúpenia Svätého Ducha - Päťdesiatnice a ospevujú Kristovo víťazstvo
-                    nad smrťou.
-                    Tento cyklus ôsmych nápevov, teda hlasov, sa opakuje počas celého liturgického roka.
-                </p>
-            </div>
-            <img src="images/oktoich/vzkriesenie.png" alt="">
+
+
+    <!-- Hlas navigation -->
+    <section class="hlas_navigation">
+        <div class="container flex bg-dark underline">
+            <div class="hlas voice" data-value="1">1. hlas</div>
+
+            <div class="hlas voice" data-value="2">2. hlas</div>
+
+            <div class="hlas voice" data-value="3">3. hlas</div>
+
+            <div class="hlas voice" data-value="4">4. hlas</div>
+
+            <div class="hlas voice" data-value="5">5. hlas</div>
+
+            <div class="hlas voice" data-value="6">6. hlas</div>
+
+            <div class="hlas voice" data-value="7">7. hlas</div>
+
+            <div class="hlas voice" data-value="8">8. hlas</div>
         </div>
     </section>
 
-    <!-- Sub head -->
-    <section class="oktoich-sub-head bg-light py-3">
+    <section class="hymn_presentation">
         <div class="container grid">
-            <div>
-                <h1 class="md">Hlas</h1>
-                <p>
-                    Každý hlas je tvorený liturgickými spevmi určitých častí bohoslužieb. Nápevy hlasov je možné
-                    zadeliť do jednotlivých kategórií.
-                </p>
+            <div class="hymn bg-dark underline">
+                <div class="spev" data-value="tropar">Tropár</div>
+
+                <div class="spev" data-value="kondak">Kondák</div>
+
+                <div class="spev" data-value="slava">Sláva i teraz</div>
+
+                <div class="spev" data-value="prokimen">Prokimen</div>
+
+                <div class="spev" data-value="dostojne">Dôstojné</div>
+
+                <div class="spev" data-value="otcenas">Otčenáš</div>
+
+                <div class="spev" data-value="samohlas">Samohlas</div>
+
+                <div class="spev" data-value="ut_prokimen">Utierňový prokimen</div>
             </div>
-            <ul>
-                <li>tropár</li>
-                <li>kondák</li>
-                <li>prokimen</li>
-                <li>samohlas</li>
-                <li>podoben</li>
-                <li>utierňový prokimen</li>
-            </ul>
+
+            <div class="presentation">
+                <h1 class="title">1. hlas - tropár</h1>
+                <!-- MUSIC PLAYER -->
+                <audio controls class="player">
+                    <source src="/audio/hlasy/1_tropar.mp3" type="audio/mpeg">
+                    Your browser does not support the audio.
+                </audio>
+
+                <img src="images/oktoich/music/1_tropar.png" alt="Something went wrong" class="music">
+
+
+
+            </div>
+
+
         </div>
     </section>
 
-    <!-- BOHOSLUZBY section -->
-    <section class="bohosluzby-order my-2">
-        <div class="container grid grid-3">
-            <div class="card flex">
-                <i class="fas fa-server fa-2x"></i>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit alias cum mollitia voluptates
-                    dolorum ducimus, consequuntur est quasi sapiente dicta quis temporibus nobis eveniet recusandae,
-                    nostrum quisquam repellat libero! Corrupti?</p>
-            </div>
-            <div class="card flex">
-                <i class="fas fa-weebly fa-2x"></i>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit alias cum mollitia voluptates
-                    dolorum ducimus, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, nihil! </p>
-            </div>
-            <div class="card flex">
-                <i class="fas fa-laptop-code fa-2x"></i>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit alias cum mollitia voluptates
-                    dolorum ducimus, </p>
-            </div>
-            <div class="card flex">
-                <i class="fas fa-database fa-2x"></i>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit alias cum mollitia voluptates
-                    dolorum ducimus</p>
-            </div>
-            <div class="card flex">
-                <i class="fas fa-power-off fa-2x"></i>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit alias cum mollitia voluptates
-                    dolorum ducimus</p>
-            </div>
-            <div class="card flex">
-                <i class="fas fa-upload fa-2x"></i>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit alias cum mollitia voluptates
-                    dolorum ducimus</p>
-            </div>
-        </div>
-    </section>
+
+
+
 
     <!-- Footer -->
     <footer class="footer bg-dark py-5">
@@ -152,6 +143,42 @@
             </div>
         </div>
     </footer>
+
+
+
+
+    <script>
+        var hlas = document.querySelectorAll(".hlas");
+        var spev = document.querySelectorAll(".spev");
+        let title = document.querySelector(".presentation .title");
+        let player = document.querySelector(".player")
+        let music = document.querySelector(".music")
+        let hl
+        let hlnum = "1"
+        let hymn = "tropar"
+        let music_path = "images/oktoich/music/"
+        let player_path = "audio/hlasy/"
+
+
+        hlas.forEach(hl => {
+            hl.addEventListener("click", function (event) {
+                hlnum = hl.getAttribute('data-value')
+                title.innerText = hlnum + ". hlas - " + hymn
+                music.src = music_path+hlnum+"_"+hymn+".png"
+                player.src = player_path+hlnum+"_"+hymn+".mp3"
+                }) 
+            })
+
+        spev.forEach(tone => {
+            tone.addEventListener("click", function (event) {
+                hymn = tone.getAttribute('data-value')
+                title.innerText = hlnum + ". hlas - " + hymn
+                music.src = music_path+hlnum+"_"+hymn+".png"
+                player.src = player_path+hlnum+"_"+hymn+".mp3"
+                }) 
+            })
+
+    </script>
 
 </body>
 
