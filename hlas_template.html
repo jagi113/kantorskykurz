@@ -16,6 +16,7 @@
 
 <body>
     <!--Navbar-->
+    <!--Navbar-->
     <div class="navbar">
         <div class="container flex">
             <a href="index.html">
@@ -26,7 +27,14 @@
                     <li id="oktoich_menu">
                         <a href="oktoich.html">Oktoich</a>
                         <ul id="oktoich_content" class="content underline">
-                            <li><a href="hlas_template.html">Hlasy</a></li>
+                            <li><a href="hlas_template.html?hlnum=1">1. hlas</a></li>
+                            <li><a href="hlas_template.html?hlnum=2">2. hlas</a></li>
+                            <li><a href="hlas_template.html?hlnum=3">3. hlas</a></li>
+                            <li><a href="hlas_template.html?hlnum=4">4. hlas</a></li>
+                            <li><a href="hlas_template.html?hlnum=5">5. hlas</a></li>
+                            <li><a href="hlas_template.html?hlnum=6">6. hlas</a></li>
+                            <li><a href="hlas_template.html?hlnum=7">7. hlas</a></li>
+                            <li><a href="hlas_template.html?hlnum=8">8. hlas</a></li>
                         </ul>
                     </li>
 
@@ -59,44 +67,48 @@
     <!-- Hlas navigation -->
     <section class="hlas_navigation">
         <div class="container flex bg-dark underline">
-            <div class="hlas voice" data-value="1">1. hlas</div>
+            <div class="hlas nav_underline" data-value="1">1. hlas</div>
 
-            <div class="hlas voice" data-value="2">2. hlas</div>
+            <div class="hlas nav_underline" data-value="2">2. hlas</div>
 
-            <div class="hlas voice" data-value="3">3. hlas</div>
+            <div class="hlas nav_underline" data-value="3">3. hlas</div>
 
-            <div class="hlas voice" data-value="4">4. hlas</div>
+            <div class="hlas nav_underline" data-value="4">4. hlas</div>
 
-            <div class="hlas voice" data-value="5">5. hlas</div>
+            <div class="hlas nav_underline" data-value="5">5. hlas</div>
 
-            <div class="hlas voice" data-value="6">6. hlas</div>
+            <div class="hlas nav_underline" data-value="6">6. hlas</div>
 
-            <div class="hlas voice" data-value="7">7. hlas</div>
+            <div class="hlas nav_underline" data-value="7">7. hlas</div>
 
-            <div class="hlas voice" data-value="8">8. hlas</div>
+            <div class="hlas nav_underline" data-value="8">8. hlas</div>
         </div>
     </section>
 
     <section class="hymn_presentation">
         <div class="container grid">
-            <div class="hymn bg-dark underline">
-                <div class="spev" data-value="tropar">Tropár</div>
+            <div class="left-column">
+                <div class="hymn bg-dark underline">
+                    <div class="spev nav_underline" data-value="tropar">Tropár</div>
 
-                <div class="spev" data-value="kondak">Kondák</div>
+                    <div class="spev nav_underline" data-value="kondak">Kondák</div>
 
-                <div class="spev" data-value="slava">Sláva i teraz</div>
+                    <div class="spev nav_underline" data-value="slava">Sláva i teraz</div>
 
-                <div class="spev" data-value="prokimen">Prokimen</div>
+                    <div class="spev nav_underline" data-value="prokimen">Prokimen</div>
 
-                <div class="spev" data-value="dostojne">Dôstojné</div>
+                    <div class="spev nav_underline" data-value="dostojne">Dôstojné</div>
 
-                <div class="spev" data-value="otcenas">Otčenáš</div>
+                    <div class="spev nav_underline" data-value="otcenas">Otčenáš</div>
 
-                <div class="spev" data-value="samohlas">Samohlas</div>
+                    <div class="spev nav_underline" data-value="samohlas">Samohlas</div>
 
-                <div class="spev" data-value="ut_prokimen">Utierňový prokimen</div>
+                    <div class="spev nav_underline" data-value="ut_prokimen">Utierňový prokimen</div>
+                    <a href="http://byzantke.szm.com/noty/slov/oktoich.pdf" target="_blank" class = "btn btn-outline download"><i class="fas fa-download"></i>   Stiahnuť noty</a>
+                    <a href="" target="_blank" class = "btn btn-outline download"><i class="fas fa-download"></i>   Stiahnuť audio</a>                
+                </div>
+                
             </div>
-
             <div class="presentation">
                 <h1 class="title">1. hlas - tropár</h1>
                 <!-- MUSIC PLAYER -->
@@ -147,36 +159,8 @@
 
 
 
-    <script>
-        var hlas = document.querySelectorAll(".hlas");
-        var spev = document.querySelectorAll(".spev");
-        let title = document.querySelector(".presentation .title");
-        let player = document.querySelector(".player")
-        let music = document.querySelector(".music")
-        let hl
-        let hlnum = "1"
-        let hymn = "tropar"
-        let music_path = "images/oktoich/music/"
-        let player_path = "audio/hlasy/"
-
-
-        hlas.forEach(hl => {
-            hl.addEventListener("click", function (event) {
-                hlnum = hl.getAttribute('data-value')
-                title.innerText = hlnum + ". hlas - " + hymn
-                music.src = music_path+hlnum+"_"+hymn+".png"
-                player.src = player_path+hlnum+"_"+hymn+".mp3"
-                }) 
-            })
-
-        spev.forEach(tone => {
-            tone.addEventListener("click", function (event) {
-                hymn = tone.getAttribute('data-value')
-                title.innerText = hlnum + ". hlas - " + hymn
-                music.src = music_path+hlnum+"_"+hymn+".png"
-                player.src = player_path+hlnum+"_"+hymn+".mp3"
-                }) 
-            })
+    <script src="js/music_presentation.js">
+        
 
     </script>
 

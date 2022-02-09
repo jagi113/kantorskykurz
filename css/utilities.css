@@ -61,10 +61,21 @@
 }
 
 .btn:hover{
-    border: 1px solid var(--primary-color);
+    outline: 1px solid var(--primary-color);
     color: var(--primary-color);
     background: white;
 }
+
+.download{
+    padding: 10px 0;
+    margin: 10px 0 0 -5px;
+    width: 130px;
+    font-size: 0.9rem;
+    align-self: center;
+    text-align: center;
+
+}
+
 
 /* Backgrounds and colored buttons */
 .bg-primary, .btn-primary{

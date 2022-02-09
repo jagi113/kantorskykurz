@@ -95,7 +95,7 @@ img{
 
 
 /* Navbar menu*/
-#oktoich_menu, #bohosluzby_menu, obdobia_menu{
+#oktoich_menu, #bohosluzby_menu, #obdobia_menu{
     display: inline-block;
     position: relative;
 }
@@ -112,7 +112,7 @@ img{
     flex-direction: column;
 }
 
-.underline a{
+.navbar .underline a{
     color: #333;
     padding-left: 0;
     margin-left: 0;
@@ -120,7 +120,7 @@ img{
     font-size: 1.1rem;
 }
 
-.underline a:after{
+.navbar .underline a:after{
     transition: all ease-in-out .3s;
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(51,51,51,1) 0%, rgba(255,255,255,1) 100%);
     content: "";
@@ -130,7 +130,7 @@ img{
     margin: -5px 0 -20px 0;
 }
 
-.underline a:hover:after {
+.navbar .underline a:hover:after {
     width: 100%;
 }
 
@@ -371,6 +371,7 @@ img{
 /* HLAS template */
 
 .hlas_navigation .container{
+    border-radius: 10px;
     margin: 10px auto;
     display:flex;
     flex-wrap: wrap;
@@ -388,7 +389,7 @@ img{
     cursor: pointer;
 }
 
-.underline div:after {
+.underline .nav_underline:after {
     transition: all ease-in-out .3s;
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,255,255,1) 0%, rgba(90,0,0,1) 100%);
     content: "";
@@ -397,7 +398,7 @@ img{
     width: 0;
 }
 
-.underline div:hover:after {
+.underline .nav_underline:hover:after {
     width: 100%;
 }
 
@@ -412,6 +413,8 @@ img{
 }
 
 .hymn_presentation .hymn{
+    margin-top: 50px;
+    border-radius: 10px;
     font-size: 1.1rem;
     padding: 20px 0 20px 30px;
     justify-content: center;
@@ -422,6 +425,11 @@ img{
     padding: 10px;
     width: 130px;
 }
+
+.hymn_presentation .hymn div:last-of-type{
+    margin-bottom: 30px;
+}
+
 
 /* PRESENTATION part*/
 .hymn_presentation .presentation .title{
@@ -435,7 +443,6 @@ img{
 /* Music player */
   .player{
       width: 100%;
-      color: var(--primary-color);
   }
   
 
