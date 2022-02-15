@@ -7,6 +7,9 @@
     --secondary-color: #6b0101;
     --dark-color: #5a0000;
     --light-color: #f4f4f4;
+    --text-color-light: white;
+    --text-color-dark: #333;
+    --text-color-regular: black;
 }
 
 *{
@@ -16,7 +19,7 @@
 } /* this will reset setting on all elements even html and body*/
 
 body{
-    font-family: 'Orelega One', cursive;;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     color: #333;
     line-height: 1.6;
 }
@@ -48,12 +51,31 @@ img{
 .navbar{
     background-color: var(--primary-color);
     color: white;
-    height: 70px;
+    height: 64px;
 
 }
-.navbar .logo{
-    margin: auto 0 auto -15px;
-    padding: 0; 
+
+.navbar .container{
+    padding: 0
+}
+
+.navbar .logo-part{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navbar img{
+    width: 64px;
+    height: 64px;
+    margin: 0px 10px 0px 0px;
+}
+
+.navbar .logo a{
+    margin: auto 0 auto 0;
+    padding: 0;
+    font-size: 2.1rem; 
+    font-weight: 400;
+    line-height: 1.2;
 }
 
 .navbar ul{
@@ -62,94 +84,98 @@ img{
 
 .navbar a{
     color: white;
-    padding: 0 10px;
-    margin: 0px 5px;
     font-size: 1.1rem;
-
-
-    /*transition: border 0.15s;*/
 }
-/*
-.navbar a:after {
-    transition: all ease-in-out .2s;
-    background: none repeat scroll 0 0 #ffffff;
-    content: "";
-    display: block;
-    height: 2px;
-    width: 0;
-    margin: 0 0 -30px 15px;
-}
-
-.navbar a:hover:after {
-    width: calc( 100% - 15px );
-}*/
-
-/*.navbar a:hover{
-    border-bottom: 2px #fff solid;
-}*/
 
 .navbar .flex{
     justify-content: space-between;
     overflow: visible;
 }
 
+.navbar .nav_window{
+    display: flex;
+    padding: auto;
+    width: auto;
+    padding: 0 20px;
+    margin: 0px;
+    height: 64px;
+    transition: 0.15s;   
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .nav_window:hover {
+    background-color: var(--secondary-color);
+}
 
 /* Navbar menu*/
-#oktoich_menu, #bohosluzby_menu, #obdobia_menu{
+#oktoich_menu, #bohosluzby_menu, #obdobia_menu, #tyzden_menu{
     display: inline-block;
     position: relative;
 }
 
 .content{
-    padding: 10px 15px;
-    position:absolute;
-    min-width: 100px;
-    width: fit-content;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    position: absolute;
+    top: 64px;
+    min-width: 110%;
+    width: auto;
     height: auto;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    background-color: var(--secondary-color);
+    border-radius: 0 10px 10px 10px;
+    /*box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);*/
     z-index: 110;
     flex-direction: column;
+    
 }
 
-.navbar .underline a{
-    color: #333;
-    padding-left: 0;
-    margin-left: 0;
-    z-index: 111;
-    font-size: 1.1rem;
-}
-/*
-.navbar .underline a:after{
-    transition: all ease-in-out .3s;
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(51,51,51,1) 0%, rgba(255,255,255,1) 100%);
-    content: "";
-    display: block;
-    height: 2px;
-    width: 0;
-    margin: -5px 0 -20px 0;
+.content li{
+    min-width: fit-content;
+    white-space: nowrap;
+    line-height: 1rem;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0 10px;
 }
 
-.navbar .underline a:hover:after {
-    width: 100%;
+.content .lit{
+    background-color: var(--primary-color);
+    margin: 0 10px;
+    padding: 0;
+    border-radius: 7px;
 }
 
-#oktoich_content, #bohosluzby_content, #obdobia_content{
+.content .lit li{
+    margin: 0;
+}
+
+.content li:hover{
+    background-color: white;
+}
+
+.content li:hover a{
+    color: var(--primary-color);
+}
+
+#oktoich_content, #bohosluzby_content, #obdobia_content, #tyzden_content{
     display: none;
 }
 
-#oktoich_menu:hover #oktoich_content{
-    display: flex;
-}
-
-#bohosluzby_menu:hover #bohosluzby_content{
-    display: flex;
-}
-
+#oktoich_menu:hover #oktoich_content,
+#bohosluzby_menu:hover #bohosluzby_content,
+#tyzden_menu:hover #tyzden_content,
 #obdobia_menu:hover #obdobia_content{
     display: flex;
-}*/
+}
+
+#oktoich_menu:hover .nav_window,
+#bohosluzby_menu:hover .nav_window,
+#tyzden_menu:hover .nav_window,
+#obdobia_menu:hover .nav_window{
+    background-color: var(--secondary-color);
+}
+
 
 /* Showcase */
 .showcase{
@@ -373,34 +399,31 @@ img{
 
 .hlas_navigation .container{
     border-radius: 10px;
-    margin: 10px auto;
+    margin: 40px auto 10px auto;
     display:flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     height: auto;
+
 }
 .hlas_navigation .container div{
     margin: 10px;
     font-size: 1.1rem;
     width: 60px;
+    min-width: fit-content;
+    width: 100px;
+    white-space: nowrap;
+    line-height: 1rem;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
 }
 
-.hlas_navigation .container div:hover, .hymn_presentation .hymn div{
+.hlas_navigation .container div:hover, .hymn_presentation .hymn div:hover{
     cursor: pointer;
-}
-
-.underline .nav_underline:after {
-    transition: all ease-in-out .3s;
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,255,255,1) 0%, rgba(90,0,0,1) 100%);
-    content: "";
-    display: block;
-    height: 2px;
-    width: 0;
-}
-
-.underline .nav_underline:hover:after {
-    width: 100%;
+    background-color: var(--light-color);
+    color: var(--primary-color)
 }
 
 .hymn_presentation .grid{
@@ -417,18 +440,27 @@ img{
     margin-top: 50px;
     border-radius: 10px;
     font-size: 1.1rem;
-    padding: 20px 0 20px 30px;
+    padding: 10px 20px 20px 20px;
     justify-content: center;
     align-items: center;
 }
 
 .hymn_presentation .hymn div{
+    margin: 10px 0;
     padding: 10px;
     width: 130px;
+    width: 100%;
+    line-height: 1.1rem;
+    border-radius: 5px;
 }
 
 .hymn_presentation .hymn div:last-of-type{
     margin-bottom: 30px;
+}
+
+.hymn .download{
+    width: 100%;
+    margin: 5px auto;
 }
 
 
