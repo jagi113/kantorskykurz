@@ -19,14 +19,17 @@
     <!--Navbar-->
     <div class="navbar">
         <div class="container flex">
-            <a href="index.html">
-                <h1 class="logo md">Kantorský kurz</h1>
-            </a>
+            <div class = "logo-part">
+            <img src="images/favicon-kantor.svg" alt="logo kurzu">
+            <h1 class="logo md">
+                <a href="index.html">Kantorský kurz</a>
+            </h1>
+            </div>
             <nav>
                 <ul>
                     <li id="oktoich_menu">
-                        <a href="oktoich.html">Oktoich</a>
-                        <ul id="oktoich_content" class="content underline">
+                        <div class="nav_window"><a href="oktoich.html">Oktoich</a></div>
+                        <ul id="oktoich_content" class="content">
                             <li><a href="hlas_template.html?hlnum=1">1. hlas</a></li>
                             <li><a href="hlas_template.html?hlnum=2">2. hlas</a></li>
                             <li><a href="hlas_template.html?hlnum=3">3. hlas</a></li>
@@ -39,24 +42,49 @@
                     </li>
 
                     <li id="bohosluzby_menu">
-                        <a href="bohosluzby.html">Bohoslužby</a>
-                        <ul id="bohosluzby_content" class="content underline">
-                            <li><a href="vecieren.html">večiereň</a></li>
-                            <li><a href="povecerie.html">povečerie</a></li>
-                            <li><a href="polnocnica">polnočnica</a></li>
-                            <li><a href="utieren">utiereň</a></li>
-                            <li><a href="casy">časy</a></li>
+                        <div class="nav_window"><a href="bohosluzby-popis.html">Bohoslužby</a></div>
+                        <ul id="bohosluzby_content" class="content">
+                            <div class="lit">
+                            <li><a href="liturgie.html">Liturgia sv. Jána Zlatoústeho</a></li>
+                            <li><a href="liturgie.html">Liturgia sv. Bazila Veľkého</a></li>
+                            <li><a href="liturgie.html">Služba vopred posvätených darov</a></li>
+                            </div>
+                            <li><a href="bohosluzby.html">večiereň</a></li>
+                            <!--
+                            <li><a href="bohosluzby.html">povečerie</a></li>
+                            <li><a href="bohosluzby.html">polnočnica</a></li>
+                            -->
+                            <li><a href="bohosluzby.html">utiereň</a></li>
+                            <!--
+                            <li><a href="bohosluzby.html">časy</a></li>
+                            -->
                         </ul>
                     </li>
 
+                    <li id="tyzden_menu">
+                        <div class="nav_window"><a href="tyzden-popis.html">Dni týždňa</a></div>
+                        <ul id="tyzden_content" class="content">
+                            <li><a href="tyzden.html">Pondelok</a></li>
+                            <li><a href="tyzden.html">Utorok</a></li>
+                            <li><a href="tyzden.html">Streda</a></li>
+                            <li><a href="tyzden.html">Štvrtok</a></li>
+                            <li><a href="tyzden.html">Piatok</a></li>
+                            <li><a href="tyzden.html">Sobota</a></li>
+                            <div class="lit">
+                            <li><a href="tyzden.html">Za zosnulých</a></li>
+                            </div>
+                        </ul>
+                    </li>
+
+                    <!--
                     <li id="obdobia_menu">
-                        <a href="obdobia.html">Liturgické obdobia</a>
-                        <ul id="obdobia_content" class="content underline">
+                        <div class="nav_window"><a href="obdobia.html">Liturgické obdobia</a></div>
+                        <ul id="obdobia_content" class="content">
                             <li><a href="pohyblive_obdobia.html">Pohyblivé obdobia</a></li>
                             <li><a href="stale_sviatky.html">Stále sviatky</a></li>
                         </ul>
                     </li>
-
+                    -->
                 </ul>
             </nav>
         </div>
