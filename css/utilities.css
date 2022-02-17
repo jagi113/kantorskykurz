@@ -3,7 +3,8 @@
     max-width: 1100px;
     margin: 0 auto;
     overflow: auto;
-    padding: 0 40px;
+    padding: 0;
+    text-align: justify;
 }
 
 .flex{
@@ -95,7 +96,7 @@
 
 .bg-light, .btn-light{
     background-color: var(--light-color);
-    color:var(--dark-color);
+    color:var(--primary-color);
 }
 
 .bg-primary a, .btn-primary a,

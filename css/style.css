@@ -52,7 +52,7 @@ img{
     background-color: var(--primary-color);
     color: white;
     height: 64px;
-
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
 }
 
 .navbar .container{
@@ -348,15 +348,21 @@ img{
 
 /* Oktoich - head */
 .oktoich-head .container {
-    height: 250px;
+    height: auto;
 }
 
 .oktoich-head img{
-    height: 230px;
+    height: 300px;
     width: auto;
     justify-self: flex-end;
 }
 
+.oktoich-sub-head .grid{
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+}
+
+/*
 .oktoich-sub-head ul {
     list-style-type: none;
     columns: 2;
@@ -372,7 +378,7 @@ img{
     padding-left: 20px;
     margin:0 0 15px 0;
     width:150px;
-}
+}*/
 
 .bohosluzby-order .container{
     height: auto;
@@ -382,22 +388,36 @@ img{
     padding: 30px 0 30px 0; 
 }
 
-.bohosluzby-order .card > i {
-    margin-right: 20px;
+.bohosluzby-order .card {
+    padding: 0 30px 0 0;
 }
 
 .bohosluzby-order .grid>*:first-child{
     grid-column: 1/span 3;
 }
 
-.bohosluzby-order .grid>*:nth-child(2) {
-    grid-column: 1/span 2;
+.bohosluzby-order .grid>*:nth-child(3) {
+    grid-column: 2/span 2;
+}
+
+.bohosluzby-order .card h4{
+    display: block;
+    padding: 10px;
+    align-self: stretch;
+    text-align: center;
+    margin: 0 25px;
+    background-color: var(--primary-color);
+    color:var(--text-color-light);
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: -0.2rem;
 }
 
 
-/* HLAS template */
+/* HLAS and LITURGIE template */
 
-.hlas_navigation .container{
+.hlas_navigation .container, 
+.lit_navigation .container{
     border-radius: 10px;
     margin: 40px auto 10px auto;
     display:flex;
@@ -407,7 +427,8 @@ img{
     height: auto;
 
 }
-.hlas_navigation .container div{
+.hlas_navigation .container div, 
+.lit_navigation .container div{
     margin: 10px;
     font-size: 1.1rem;
     width: 60px;
@@ -420,7 +441,9 @@ img{
     text-align: center;
 }
 
-.hlas_navigation .container div:hover, .hymn_presentation .hymn div:hover{
+.hlas_navigation .container div:hover, 
+.hymn_presentation .hymn .spev:hover,
+.lit_navigation .container div:hover{
     cursor: pointer;
     background-color: var(--light-color);
     color: var(--primary-color)
@@ -433,6 +456,7 @@ img{
     justify-content: center;
     align-items: flex-start;
     height: auto;
+    overflow: visible;
     margin-bottom: 100px;
 }
 
@@ -445,16 +469,15 @@ img{
     align-items: center;
 }
 
-.hymn_presentation .hymn div{
+.hymn_presentation .hymn .spev{
     margin: 10px 0;
     padding: 10px;
-    width: 130px;
     width: 100%;
     line-height: 1.1rem;
     border-radius: 5px;
 }
 
-.hymn_presentation .hymn div:last-of-type{
+.hymn_presentation .hymn #last-part{
     margin-bottom: 30px;
 }
 
@@ -463,13 +486,72 @@ img{
     margin: 5px auto;
 }
 
+.broader_menu{
+
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+.detail_options{
+    padding: 10px 0;
+    font-size: 0.9rem;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: 110%;
+    width: auto;
+    height: auto;
+    background-color: var(--secondary-color);
+    border-radius: 0 10px 10px 10px;
+    /*box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);*/
+    z-index: 110;
+    flex-direction: column;
+    
+}
+
+.broader_menu .first_label{
+    display: block;
+    padding: 10px 10px;
+    margin:0;
+    width: 100%;
+    border-radius:  5px 0 0 5px;
+    color:var(--text-color-light);
+}
+
+.broader_menu .detail_options .spev{
+    font-size: 1rem;
+    margin: 0 0 5px 15px;
+    width: calc(100% - 15px);
+    padding: 5px 10px;
+    white-space: nowrap;
+}
+
+.broader_menu .detail_options{
+    display: none;
+}
+
+.broader_menu:hover .detail_options{
+    display: flex;
+}
+
+.broader_menu:hover .first_label{
+    background-color: var(--secondary-color);
+}
+
 
 /* PRESENTATION part*/
+.moving_container{
+    position: relative;
+    height: 100%;
+}
+
 .presentation{
     margin-left: 30px;
     margin-right: 30px;
+    position: sticky;
+    object-fit: cover;
 }
-
 
 .hymn_presentation .presentation .title{
     text-align: center;

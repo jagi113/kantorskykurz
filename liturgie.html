@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon", type="image/svg+xml" href="/images/favicon-kantor.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Kantorský kurz</title>
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <!--Navbar-->
+    <div class="navbar">
+        <div class="container flex">
+            <div class = "logo-part">
+            <img src="images/favicon-kantor.svg" alt="logo kurzu">
+            <h1 class="logo md">
+                <a href="index.html">Kantorský kurz</a>
+            </h1>
+            </div>
+            <nav>
+                <ul>
+                    <li id="oktoich_menu">
+                        <div class="nav_window"><a href="oktoich.html">Oktoich</a></div>
+                        <ul id="oktoich_content" class="content">
+                            <li><a href="hlas_template.html?hlnum=1">1. hlas</a></li>
+                            <li><a href="hlas_template.html?hlnum=2">2. hlas</a></li>
+                            <li><a href="hlas_template.html?hlnum=3">3. hlas</a></li>
+                            <li><a href="hlas_template.html?hlnum=4">4. hlas</a></li>
+                            <li><a href="hlas_template.html?hlnum=5">5. hlas</a></li>
+                            <li><a href="hlas_template.html?hlnum=6">6. hlas</a></li>
+                            <li><a href="hlas_template.html?hlnum=7">7. hlas</a></li>
+                            <li><a href="hlas_template.html?hlnum=8">8. hlas</a></li>
+                        </ul>
+                    </li>
+
+                    <li id="bohosluzby_menu">
+                        <div class="nav_window"><a href="bohosluzby-popis.html">Bohoslužby</a></div>
+                        <ul id="bohosluzby_content" class="content">
+                            <div class="lit">
+                            <li><a href="liturgie.html">Liturgia sv. Jána Zlatoústeho</a></li>
+                            <li><a href="liturgie.html">Liturgia sv. Bazila Veľkého</a></li>
+                            <li><a href="liturgie.html">Služba vopred posvätených darov</a></li>
+                            </div>
+                            <li><a href="bohosluzby.html">večiereň</a></li>
+                            <!--
+                            <li><a href="bohosluzby.html">povečerie</a></li>
+                            <li><a href="bohosluzby.html">polnočnica</a></li>
+                            -->
+                            <li><a href="bohosluzby.html">utiereň</a></li>
+                            <!--
+                            <li><a href="bohosluzby.html">časy</a></li>
+                            -->
+                        </ul>
+                    </li>
+
+                    <li id="tyzden_menu">
+                        <div class="nav_window"><a href="tyzden-popis.html">Dni týždňa</a></div>
+                        <ul id="tyzden_content" class="content">
+                            <li><a href="tyzden.html">Pondelok</a></li>
+                            <li><a href="tyzden.html">Utorok</a></li>
+                            <li><a href="tyzden.html">Streda</a></li>
+                            <li><a href="tyzden.html">Štvrtok</a></li>
+                            <li><a href="tyzden.html">Piatok</a></li>
+                            <li><a href="tyzden.html">Sobota</a></li>
+                            <div class="lit">
+                            <li><a href="tyzden.html">Za zosnulých</a></li>
+                            </div>
+                        </ul>
+                    </li>
+
+                    <!--
+                    <li id="obdobia_menu">
+                        <div class="nav_window"><a href="obdobia.html">Liturgické obdobia</a></div>
+                        <ul id="obdobia_content" class="content">
+                            <li><a href="pohyblive_obdobia.html">Pohyblivé obdobia</a></li>
+                            <li><a href="stale_sviatky.html">Stále sviatky</a></li>
+                        </ul>
+                    </li>
+                    -->
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+
+    <!-- Hlas navigation -->
+    <section class="lit_navigation">
+        <div class="container flex bg-primary">
+            <div class="lit" data-value="jan">Liturgia sv. Jána Zlatoústeho</div>
+
+            <div class="lit" data-value="bazil">Liturgia sv. Bazila Veľkého</div>
+
+            <div class="lits" data-value="vpd">Služba vopred posvätených darov</div>
+        </div>
+    </section>
+
+    <section class="hymn_presentation">
+        <div class="container grid">
+            <div class="left-column" id="jan_column">
+                <div class="hymn bg-primary">
+                    <div class= "broader_menu">
+                        <div class="first_label">Jekténia</div>
+                        <div class="detail_options">
+                            <div class="spev" data-value="amen">Amen</div>
+                            <div class="spev" data-value="pane_zmiluj_sa">Pane, zmiluj sa</div>
+                            <div class="spev" data-value="tebe_pane">Tebe, Pane</div>
+                            <div class="spev" data-value="daruj_nam_pane">Daruj nám, Pane</div>
+                        </div>
+                    </div>
+
+                    <div class= "broader_menu">
+                        <div class="first_label">1. a 2. antifóna</div>
+                        <div class="detail_options">
+                            <div class="spev" data-value="antifony_predobrazujuce">predobrazujúca</div>
+                            <div class="spev" data-value="antifony_kazdodenne">každodenná</div>
+                        </div>
+                    </div>
+
+                    <div class= "broader_menu">
+                        <div class="first_label">3. antifóna</div>
+                        <div class="detail_options">
+                            <div class="spev" data-value="blazenstva">Blaženstvá</div>
+                            <div class="spev" data-value="antifona_3_kazdodenna">každodenná</div>
+                        </div>
+                    </div>
+
+                    <div class= "broader_menu">
+                        <div class="first_label">Vchod</div>
+                        <div class="detail_options">
+                            <div class="spev" data-value="vchod_nedelny">nedeľný</div>
+                            <div class="spev" data-value="vchod_kazdodenny">každodenný</div>
+                        </div>
+                    </div>
+
+                    <div class= "broader_menu">
+                        <div class="first_label">Svätý Bože</div>
+                        <div class="detail_options">
+                            <div class="spev" data-value="svaty_boze_1">1. nápev</div>
+                            <div class="spev" data-value="svaty_boze_2">2. nápev</div>
+                            <div class="spev" data-value="svaty_boze_velkonocny">veľkonočný</div>
+                        </div>
+                    </div>
+
+                    <div class= "broader_menu">
+                        <div class="first_label">Cherubínska pieseň</div>
+                        <div class="detail_options">
+                            <div class="spev" data-value="cherubinska_nedelna">nedeľná</div>
+                            <div class="spev" data-value="cherubinska_vianocna">vianočná</div>
+                            <div class="spev" data-value="cherubinska_postna">pôstna</div>
+                            <div class="spev" data-value="cherubinska_velkonocna">veľkonočná</div>
+                        </div>
+                    </div>
+
+                    <div class= "broader_menu">
+                        <div class="first_label">Anafora</div>
+                        <div class="detail_options">
+                            <div class="spev" data-value="i_tvojmu_duchu">I tvojmu duchu</div>
+                            <div class="spev" data-value="otca_i_syna">Otca i Syna</div>
+                            <div class="spev" data-value="verím">Vyznanie viery</div>
+                            <div class="spev" data-value="milost_pokoja">Milosť pokoja</div>
+                            <div class="spev" data-value="mame_ich_u_pana">Máme ich u Pána</div>
+                            <div class="spev" data-value="je_dostojne_a_spravne">Je dôstojné a správne</div>
+                            <div class="spev" data-value="svaty_svaty_svaty">Svätý, svätý, svätý</div>
+                            <div class="spev" data-value="ospevujeme_ta">Ospevujeme ťa</div>
+                            <div class="spev" data-value="i_na_vsetkych">I na všetkých</div>
+                        </div>
+                    </div>
+
+                    <div class= "broader_menu">
+                        <div class="first_label">Spevy prijímania</div>
+                        <div class="detail_options">
+                            <div class="spev" data-value="jediny_je_svaty">Jediný je svätý</div>
+                            <div class="spev" data-value="pricasten">Pričasten???</div>
+                            <div class="spev" data-value="videli_sme">Videli sme</div>
+                            <div class="spev" data-value="nech_sa_naplnia">Nech sa naplnia</div>
+                            <div class="spev" data-value="nech_je_pozehnane">Nech je požehnané</div>
+                        </div>
+                    </div>
+
+                    <div class= "broader_menu" id="last-part">
+                        <div class="first_label">Mnoholitstvie</div>
+                        <div class="detail_options">
+                            <div class="spev" data-value="napev1">Nápev1</div>
+                            <div class="spev" data-value="napev2">Nápev2</div>
+                            <div class="spev" data-value="napev3">Nápev3</div>
+
+                        </div>
+                    </div>
+                    
+
+
+                    <!--
+                    <div class="spev" data-value="samohlas">Samohlas</div>
+
+                    <div class="spev" data-value="ut_prokimen">Utierňový prokimen</div>
+                    -->
+                    <a href="" target="_blank" class = "btn btn-outline download"><i class="fas fa-download"></i>   Stiahnuť noty</a>
+                    <a href="" target="_blank" class = "btn btn-outline download"><i class="fas fa-download"></i>   Stiahnuť audio</a>                
+                </div>
+                
+            </div>
+            <div class="moving_container">
+                <div class="presentation">
+                    <h1 class="title">1. hlas - tropár</h1>
+                    <!-- MUSIC PLAYER -->
+                    <audio controls class="player">
+                        <source src="/audio/liturgie/1_tropar.mp3" type="audio/mpeg" >
+                        Your browser does not support the audio.
+                    </audio>
+
+                    <img src="images/liturgie/jektenia.png" alt="Je nám ľúto. Notový záznam aktuálne nie je k dispozícii." class="music">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer bg-dark py-5">
+        <div class="container grid grid-3">
+            <div>
+                <h1>Kantorský kurz</h1>
+                <p>Jaroslav Girovský</p>
+                <p>Copyright &copy; 2022</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="oktoich.html">Oktoich</a></li>
+
+                    <li><a href="bohosluzby.html">Bohoslužby</a></li>
+                </ul>
+            </nav>
+            <div class="social">
+                <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="js/music_presentation.js">
+        
+
+    </script>
+
+</body>
+
+</html>
