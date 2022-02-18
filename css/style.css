@@ -475,26 +475,28 @@ img{
     width: 100%;
     line-height: 1.1rem;
     border-radius: 5px;
+    text-align: left;
 }
 
-.hymn_presentation .hymn #last-part{
-    margin-bottom: 30px;
-}
 
 .hymn .download{
     width: 100%;
     margin: 5px auto;
 }
 
-.broader_menu{
+.hymn .first{
+    margin-top: 50px;
+}
 
+
+.broader_menu{
     display: inline-block;
     position: relative;
     width: 100%;
 }
 
 .detail_options{
-    padding: 10px 0;
+    padding: 10px 10px 10px 0;
     font-size: 0.9rem;
     position: absolute;
     top: 0;
@@ -517,6 +519,7 @@ img{
     width: 100%;
     border-radius:  5px 0 0 5px;
     color:var(--text-color-light);
+    line-height: 1.1rem;
 }
 
 .broader_menu .detail_options .spev{
