@@ -27,7 +27,7 @@ let hymn = spev[0].getAttribute("data-value");
         case "basil":
             liturgia = "Liturgia sv. Bazila Veľkého"
             hymn_name = "Milosť pokoja";
-            hymn = "milost_pokoja";
+            hymn = "bazil_milost_pokoja";
             jan_column.style.display = "none";
             basil_column.style.display = "inline";
             vpd_column.style.display = "none";
@@ -35,6 +35,7 @@ let hymn = spev[0].getAttribute("data-value");
         case "vpd":
             liturgia = "Služba vopred posvätených darov"
             hymn = "vpd_amen";
+            hymn_name = 'Jekténia - "Amen"'
             jan_column.style.display = "none";
             basil_column.style.display = "none";
             vpd_column.style.display = "inline";
@@ -65,13 +66,13 @@ lits.forEach(lit => {
             case "basil":
                 liturgia = "Liturgia sv. Bazila Veľkého"
                 hymn_name = "Milosť pokoja";
-                hymn = "milost_pokoja";
+                hymn = "bazil_milost_pokoja";
                 jan_column.style.display = "none";
                 basil_column.style.display = "inline";
                 vpd_column.style.display = "none";
                 break;
             case "vpd":
-                hymn_name = 'Jekténia - krátke a dlhé "Amen"';
+                hymn_name = 'Jekténia - "Amen"';
                 hymn = "vpd_amen";
                 liturgia = "Služba vopred posvätených darov"
                 jan_column.style.display = "none";
