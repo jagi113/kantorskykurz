@@ -400,6 +400,10 @@ img{
     grid-column: 2/span 2;
 }
 
+.bohosluzby-order .grid>*:nth-child(5) {
+    grid-column: 2/span 2;
+}
+
 .bohosluzby-order .card h4{
     display: block;
     padding: 10px;
@@ -540,6 +544,7 @@ img{
 
 .broader_menu:hover .first_label{
     background-color: var(--secondary-color);
+    cursor: default;
 }
 
 
@@ -570,9 +575,38 @@ img{
   }
   
 
+  /* Bohosluzby-popis*/
+  /* Bohosluzby-popis*/
+  /* Bohosluzby-popis*/
+  .bohosluzby-sub-head .grid {
+    grid-template-columns: 1fr 3fr;
+    height: auto;
+    gap: 40px;
+  }
 
+  .bohosluzby-order .horizontal .card{
+    flex-direction: column;
+    padding: 0;
+    
+  }
 
+  .bohosluzby-order .horizontal .card h4{
+    display: block;
+    width: auto;
+    writing-mode: horizontal-tb;
+    text-orientation: normal;
+    padding: 10px;
+    padding-left: 20px;
+    text-align: left;
+    margin: 20px 0 0 0;
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--primary-color) 50%, rgba(128,0,0,0) 95%);
+    color:var(--text-color-light);
+    letter-spacing: 0;
+}
 
+.bohosluzby-order .horizontal .card div:nth-child(2){
+    padding: 20px;
+}
 
 
 
