@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon", type="image/svg+xml" href="/images/favicon-kantor.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Kantorský kurz</title>
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <!--Navbar-->
+    <div class="navbar">
+        <div class="container flex">
+            <div class = "logo-part">
+            <img src="images/favicon-kantor.svg" alt="logo kurzu">
+            <h1 class="logo md">
+                <a href="index.html">Kantorský kurz</a>
+            </h1>
+            </div>
+            <nav>
+                <ul>
+                    <li id="oktoich_menu">
+                        <div class="nav_window"><a href="oktoich.html">Oktoich</a></div>
+                        <ul id="oktoich_content" class="content">
+                            <li><a href="hlas_template.html?hlnum=1">1. hlas</a></li>
+                            <li><a href="hlas_template.html?hlnum=2">2. hlas</a></li>
+                            <li><a href="hlas_template.html?hlnum=3">3. hlas</a></li>
+                            <li><a href="hlas_template.html?hlnum=4">4. hlas</a></li>
+                            <li><a href="hlas_template.html?hlnum=5">5. hlas</a></li>
+                            <li><a href="hlas_template.html?hlnum=6">6. hlas</a></li>
+                            <li><a href="hlas_template.html?hlnum=7">7. hlas</a></li>
+                            <li><a href="hlas_template.html?hlnum=8">8. hlas</a></li>
+                        </ul>
+                    </li>
+
+                    <li id="bohosluzby_menu">
+                        <div class="nav_window"><a href="bohosluzby-popis.html">Bohoslužby</a></div>
+                        <ul id="bohosluzby_content" class="content">
+                            <div class="lit">
+                            <li><a href="liturgie.html?liturgy=jan">Liturgia sv. Jána Zlatoústeho</a></li>
+                            <li><a href="liturgie.html?liturgy=basil">Liturgia sv. Bazila Veľkého</a></li>
+                            <li><a href="liturgie.html?liturgy=vpd">Služba vopred posvätených darov</a></li>
+                            </div>
+                            <li><a href="bohosluzby.html?bohosluzba=vecieren">večiereň</a></li>
+                            <!--
+                            <li><a href="bohosluzby.html">povečerie</a></li>
+                            <li><a href="bohosluzby.html">polnočnica</a></li>
+                            -->
+                            <li><a href="bohosluzby.html?bohosluzba=utieren">utiereň</a></li>
+                            <!--
+                            <li><a href="bohosluzby.html">časy</a></li>
+                            -->
+                        </ul>
+                    </li>
+
+                    <li id="tyzden_menu">
+                        <div class="nav_window"><a href="tyzden-popis.html">Dni týždňa</a></div>
+                        <ul id="tyzden_content" class="content">
+                            <li><a href="tyzden.html">Pondelok</a></li>
+                            <li><a href="tyzden.html">Utorok</a></li>
+                            <li><a href="tyzden.html">Streda</a></li>
+                            <li><a href="tyzden.html">Štvrtok</a></li>
+                            <li><a href="tyzden.html">Piatok</a></li>
+                            <li><a href="tyzden.html">Sobota</a></li>
+                            <div class="lit">
+                            <li><a href="tyzden.html">Za zosnulých</a></li>
+                            </div>
+                        </ul>
+                    </li>
+
+                    <!--
+                    <li id="obdobia_menu">
+                        <div class="nav_window"><a href="obdobia.html">Liturgické obdobia</a></div>
+                        <ul id="obdobia_content" class="content">
+                            <li><a href="pohyblive_obdobia.html">Pohyblivé obdobia</a></li>
+                            <li><a href="stale_sviatky.html">Stále sviatky</a></li>
+                        </ul>
+                    </li>
+                    -->
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+
+    <!-- Hlas navigation -->
+    <section class="lit_navigation">
+        <div class="container flex bg-primary">
+            <div class="lit_option" data-value="vecieren">Večiereň</div>
+
+            <div class="lit_option" data-value="utieren">Utiereň</div>
+
+            <!--<div class="lit_option" data-value="vpd">Služba vopred posvätených darov</div>-->
+        </div>
+    </section>
+
+    <section class="hymn_presentation">
+        <div class="container grid">
+            <!--Večiereň menu-->
+            <div class="left-column" id="vecieren">
+                <div class="hymn bg-primary">
+                    
+                    <div class= "broader_menu">
+                        <div class="first_label">Žalm 103</div>
+                        <div class="detail_options">
+                            <div class="spev" data-value="vecieren_zalm_103_bezny" name-value='Žalm 103 - zvyčajný nápev'>Zvyčajný nápev</div>
+                            <div class="spev" data-value="vecieren_zalm_103_studitsky" name-value='Žalm 103 - studitský nápev'>Studitský nápev</div>
+                        </div>
+                    </div>
+
+                    <div class= "broader_menu">
+                        <div class="first_label">Blažený človek</div>
+                        <div class="detail_options">
+                            <div class="spev" data-value="vecieren_blazeny_clovek_bezny" name-value='Blažený človek - zvyčajný nápev'>Zvyčajný nápev</div>
+                            <div class="spev" data-value="vecieren_blazeny_clovek_kratky" name-value='Žalm 103 - krátky nápev'>Krátky nápev</div>
+                        </div>
+                    </div>
+
+                    <div class= "broader_menu">
+                        <div class="first_label">Pane, ja volám</div>
+                        <div class="detail_options">
+                            <div class="spev" data-value="vecieren_1_pane_ja_volam" name-value='Pane, ja volám k tebe - 1. hlas'>1. hlas</div>
+                            <div class="spev" data-value="vecieren_2_pane_ja_volam" name-value='Pane, ja volám k tebe - 2. hlas'>2. hlas</div>
+                            <div class="spev" data-value="vecieren_3_pane_ja_volam" name-value='Pane, ja volám k tebe - 3. hlas'>3. hlas</div>
+                            <div class="spev" data-value="vecieren_4_pane_ja_volam" name-value='Pane, ja volám k tebe - 4. hlas'>4. hlas</div>
+                            <div class="spev" data-value="vecieren_5_pane_ja_volam" name-value='Pane, ja volám k tebe - 5. hlas'>5. hlas</div>
+                            <div class="spev" data-value="vecieren_6_pane_ja_volam" name-value='Pane, ja volám k tebe - 6. hlas'>6. hlas</div>
+                            <div class="spev" data-value="vecieren_7_pane_ja_volam" name-value='Pane, ja volám k tebe - 7. hlas'>7. hlas</div>
+                            <div class="spev" data-value="vecieren_8_pane_ja_volam" name-value='Pane, ja volám k tebe - 8. hlas'>8. hlas</div>
+                        </div>
+                    </div>
+
+                    <div class= "broader_menu">
+                        <div class="first_label">Veršová sloha</div>
+                        <div class="detail_options">
+                            <div class="spev" data-value="vecieren_1_sloha" name-value='Veršová sloha - 1. hlas'>1. hlas</div>
+                            <div class="spev" data-value="vecieren_2_sloha" name-value='Veršová sloha - 2. hlas'>2. hlas</div>
+                            <div class="spev" data-value="vecieren_3_sloha" name-value='Veršová sloha - 3. hlas'>3. hlas</div>
+                            <div class="spev" data-value="vecieren_4_sloha" name-value='Veršová sloha - 4. hlas'>4. hlas</div>
+                            <div class="spev" data-value="vecieren_5_sloha" name-value='Veršová sloha - 5. hlas'>5. hlas</div>
+                            <div class="spev" data-value="vecieren_6_sloha" name-value='Veršová sloha - 6. hlas'>6. hlas</div>
+                            <div class="spev" data-value="vecieren_7_sloha" name-value='Veršová sloha - 7. hlas'>7. hlas</div>
+                            <div class="spev" data-value="vecieren_8_sloha" name-value='Veršová sloha - 8. hlas'>8. hlas</div>
+                        </div>
+                    </div>
+
+                    <div class= "broader_menu">
+                        <div class="first_label">Samohlasový verš</div>
+                        <div class="detail_options">
+                            <div class="spev" data-value="vecieren_1_vers" name-value='Samohlasový verš - 1. hlas'>1. hlas</div>
+                            <div class="spev" data-value="vecieren_2_vers" name-value='Samohlasový verš - 2. hlas'>2. hlas</div>
+                            <div class="spev" data-value="vecieren_3_vers" name-value='Samohlasový verš - 3. hlas'>3. hlas</div>
+                            <div class="spev" data-value="vecieren_4_vers" name-value='Samohlasový verš - 4. hlas'>4. hlas</div>
+                            <div class="spev" data-value="vecieren_5_vers" name-value='Samohlasový verš - 5. hlas'>5. hlas</div>
+                            <div class="spev" data-value="vecieren_6_vers" name-value='Samohlasový verš - 6. hlas'>6. hlas</div>
+                            <div class="spev" data-value="vecieren_7_vers" name-value='Samohlasový verš - 7. hlas'>7. hlas</div>
+                            <div class="spev" data-value="vecieren_8_vers" name-value='Samohlasový verš - 8. hlas'>8. hlas</div>
+                        </div>
+                    </div>
+
+                    <div class= "broader_menu">
+                        <div class="first_label">Sláva i teraz</div>
+                        <div class="detail_options">
+                            <div class="spev" data-value="vecieren_1_slava" name-value='Sláva i teraz - 1. hlas'>1. hlas</div>
+                            <div class="spev" data-value="vecieren_2_slava" name-value='Sláva i teraz - 2. hlas'>2. hlas</div>
+                            <div class="spev" data-value="vecieren_3_slava" name-value='Sláva i teraz - 3. hlas'>3. hlas</div>
+                            <div class="spev" data-value="vecieren_4_slava" name-value='Sláva i teraz - 4. hlas'>4. hlas</div>
+                            <div class="spev" data-value="vecieren_5_slava" name-value='Sláva i teraz - 5. hlas'>5. hlas</div>
+                            <div class="spev" data-value="vecieren_6_slava" name-value='Sláva i teraz - 6. hlas'>6. hlas</div>
+                            <div class="spev" data-value="vecieren_7_slava" name-value='Sláva i teraz - 7. hlas'>7. hlas</div>
+                            <div class="spev" data-value="vecieren_8_slava" name-value='Sláva i teraz - 8. hlas'>8. hlas</div>
+                        </div>
+                    </div>
+
+                    <div class="spev" data-value="vecieren_svetlo_tiche" name-value='Svetlo tiché'>Svetlo tiché</div>
+
+                    <div class= "broader_menu">
+                        <div class="first_label">Prokimen</div>
+                        <div class="detail_options">
+                            <div class="spev" data-value="vecieren_prokimen_sobota" name-value='Prokimen na sobotu večer'>V sobotu večer</div>
+                            <div class="spev" data-value="vecieren_prokimen_nedela" name-value='Prokimen na nedeľu večer'>V nedeľu večer</div>
+                            <div class="spev" data-value="vecieren_prokimen_pondelok" name-value='Prokimen na pondelok večer'>V pondelok večer</div>
+                            <div class="spev" data-value="vecieren_prokimen_utorok" name-value='Prokimen na utorok večer'>V utorok večer</div>
+                            <div class="spev" data-value="vecieren_prokimen_stredu" name-value='Prokimen na stredu večer'>V stredu večer</div>
+                            <div class="spev" data-value="vecieren_prokimen_stvrtok" name-value='Prokimen na štvrtok večer'>V štvrtok večer</div>
+                            <div class="spev" data-value="vecieren_prokimen_piatok" name-value='Prokimen na piatok večer'>V piatok večer</div>
+                            <div class="spev" data-value="vecieren_prokimen_velkopostny" name-value='Veľkopôstny prokimen'>Veľkopôstny</div>
+                        </div>
+                    </div>
+
+                    <div class="spev" data-value="vecieren_rac_nas_pane" name-value='Ráč nás, Pane'>Ráč nás, Pane</div>
+                    <div class="spev" data-value="vecieren_teraz_prepustis" name-value='Teraz prepustíš'>Teraz prepustíš</div>
+                    <div class="spev" data-value="vecieren_nech-je-pozehnane" name-value='Nech je požehnané'>Nech je požehnané</div>
+
+                    
+                    
+
+                    <a href="" target="_blank" class = "btn first btn-outline download" ><i class="fas fa-download"></i>   Stiahnuť noty</a>
+                    <a href="" target="_blank" class = "btn btn-outline download"><i class="fas fa-download"></i>   Stiahnuť audio</a>                
+                </div>
+
+                
+            </div>
+
+            <!--Utiereň left column menu-->
+            <div class="left-column" id="utieren">
+                <div class="hymn bg-primary">
+                    <div class="spev" data-value="bazil_milost_pokoja" name-value='Milosť pokoja'>Milosť pokoja</div>
+                    <div class="spev" data-value="bazil_je_dostojne" name-value='Je dôstojné a správne'>Je dôstojné</div>
+                    <div class="spev" data-value="bazil_svaty_svaty"  name-value='Svätý, svätý, svätý'>Svätý, svätý</div>
+                    <div class="spev" data-value="bazil_amen" name-value='Amen'>Amen</div>
+                    <div class="spev" data-value="bazil_ospevujeme_ta" name-value='Ospevujeme ťa'>Ospevujeme ťa</div>
+                    <div class="spev" data-value="bazil_z_teba_milostiplna" name-value='Z teba, Milostiplná'>Z teba, Milostiplná</div>
+                    <div class="spev" data-value="bazil_i_na_vsetkych"  name-value='I na všetkých'>I na všetkých</div>
+
+                    <a href="" target="_blank" class = "btn first btn-outline download"><i class="fas fa-download"></i>   Stiahnuť noty</a>
+                    <a href="" target="_blank" class = "btn btn-outline download"><i class="fas fa-download"></i>   Stiahnuť audio</a>                
+                </div>     
+            </div>
+
+            <!--VPD left column menu-->
+            <div class="left-column" id="vpd">
+                <div class="hymn bg-primary">
+                    <div class= "broader_menu">
+                        <div class="first_label">Jekténia</div>
+                        <div class="detail_options">
+                            <div class="spev" data-value="vpd_amen" name-value='Jekténia - "Amen"'>Amen</div>
+                            <div class="spev" data-value="vpd_pane_zmiluj_sa" name-value='Jekténia - krátke a dlhé "Pane, zmiluj sa"'>Pane, zmiluj sa</div>
+                            <div class="spev" data-value="vpd_tebe_pane" name-value='Jekténia - krátke a dlhé "Tebe, Pane"'>Tebe, Pane</div>
+                            <div class="spev" data-value="vpd_pred_tebou_pane" name-value='Jekténia - "Pred Tebou, Pane"'>Pred Tebou, Pane</div>
+                            <div class="spev" data-value="vpd_daruj_nam_pane" name-value='Jekténia - "Daruj nám, Pane"'>Daruj nám, Pane</div>
+                            <div class="spev" data-value="vpd_i_tvojmu_duchu" name-value='Jekténia - "I tvojmu duchu"'>I tvojmu duchu</div>
+                        </div>
+                    </div>
+
+                    <div class="spev" data-value="vecieren_svetlo_tiche" name-value='Svetlo tiché'>Svetlo tiché</div>
+                    
+                    <div class= "broader_menu">
+                        <div class="first_label">Moja modlitba</div>
+                        <div class="detail_options">
+                            <div class="spev" data-value="vpd_moja_modlitba" name-value='Moja modlitba - bežný nápev'>Moja modlitba - bežný nápev</div>
+                            <div class="spev" data-value="vpd_pane_k_tebe_volam" name-value='Pane, k tebe volám - bežný nápev'>Pane, k tebe volám - bežný nápev</div>
+                            <div class="spev" data-value="vpd_pane_k_mojim_ustam" name-value='Pane, k mojim ústam - bežný nápev'>Pane, k mojim ústam - bežný nápev</div>
+                            <div class="spev" data-value="vpd_nedaj_aby_sa_moje_srdce" name-value='Nedaj, aby sa moje srdce - bežný nápev'>Nedaj, aby sa moje srdce - bežný nápev</div>
+                            <div class="spev" data-value="vpd_moja_modlitba_knaz" name-value='Moja modlitba - kňazský nápev'>Moja modlitba - kňazský nápev</div>
+                            <div class="spev" data-value="vpd_pane_k_tebe_volam_knaz" name-value='Pane, k tebe volám - kňazský nápev'>Pane, k tebe volám - kňazský nápev</div>
+                            <div class="spev" data-value="vpd_pane_k_mojim_ustam_knaz" name-value='Pane, k mojim ústam - kňazský nápev'>Pane, k mojim ústam - kňazský nápev</div>
+                            <div class="spev" data-value="vpd_nedaj_aby_sa_moje_srdce_knaz" name-value='Nedaj, aby sa moje srdce - kňazský nápev'>Nedaj, aby sa moje srdce - kňazský nápev</div>
+                        </div>
+                    </div>
+
+                    <div class="spev" data-value="vpd_nebeske_mocnosti" name-value='Nebeské mocnosti'>Nebeské mocnosti</div>
+                    <div class="spev" data-value="vpd_otce_nas" name-value='Otče náš'>Otče náš</div>
+                    <div class="spev" data-value="vpd_jediny_je_svaty" name-value='Jediný je svätý'>Jediný je svätý</div>
+                    <div class="spev" data-value="vpd_skuste_a_vidte" name-value='Skúste a viďte'>Skúste a viďte</div>
+                    <div class="spev" data-value="vpd_velebit_chcem_pana" name-value='Velebiť chcem Pána'>Velebiť chcem Pána</div>
+                    <div class="spev" data-value="vpd_dobrorecime_ti" name-value='Dobrorečíme Ti'>Dobrorečíme Ti</div>
+                    <div class="spev" data-value="vpd_nech_je_pozehnane" name-value='Nech je požehnané'>Nech je požehnané</div>
+                    <div class="spev" data-value="vpd_slava_otcu" name-value='Záverečné "Sláva Otcu"'>Sláva Otcu</div>
+
+                    
+                    <a href="" target="_blank" class = "btn first btn-outline download"><i class="fas fa-download"></i>   Stiahnuť noty</a>
+                    <a href="" target="_blank" class = "btn btn-outline download"><i class="fas fa-download"></i>   Stiahnuť audio</a>                
+                </div>     
+            </div>
+
+            <div class="moving_container">
+                <div class="presentation">
+                    <h1 class="title">1. hlas - tropár</h1>
+                    <!-- MUSIC PLAYER -->
+                    <audio controls class="player">
+                        <source src="/audio/liturgie/1_tropar.mp3" type="audio/mpeg" >
+                        Your browser does not support the audio.
+                    </audio>
+
+                    <img src="images/liturgie/jektenia.png" alt="Je nám ľúto. Notový záznam aktuálne nie je k dispozícii." class="music">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer bg-dark py-5">
+        <div class="container grid grid-3">
+            <div>
+                <h1>Kantorský kurz</h1>
+                <p>Jaroslav Girovský</p>
+                <p>Copyright &copy; 2022</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="oktoich.html">Oktoich</a></li>
+
+                    <li><a href="bohosluzby.html">Bohoslužby</a></li>
+                </ul>
+            </nav>
+            <div class="social">
+                <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="js/bohosluzby_presentation.js">
+        
+
+    </script>
+
+</body>
+
+</html>
