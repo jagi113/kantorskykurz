@@ -45,7 +45,7 @@ let hymn = spev[0].getAttribute("data-value");
     
     title.innerText = `${sluzenie} - ${hymn_name}`;
     music.src = `${music_path + bohosluzba}/${hymn}.png`;
-    player.src = `${music_path + bohosluzba}/${hymn}.mp3`;
+    player.src = `${audio_path + bohosluzba}/${hymn}.mp3`;
 })();
 
 
@@ -85,7 +85,7 @@ lits.forEach(lit => {
         
         title.innerText = `${sluzenie} - ${hymn_name}`;
         music.src = `${music_path + bohosluzba}/${hymn}.png`;
-        player.src = `${music_path + bohosluzba}/${hymn}.mp3`;
+        player.src = `${audio_path + bohosluzba}/${hymn}.mp3`;
     })
 })
 
@@ -95,6 +95,6 @@ spev.forEach(sp => {
         hymn_name= sp.getAttribute("name-value");;
         title.innerText = `${sluzenie} - ${hymn_name}`;
         music.src = `${music_path + bohosluzba}/${hymn}.png`;
-        player.src = `${music_path + bohosluzba}/${hymn}.mp3`;
+        player.src = `${audio_path + bohosluzba}/${hymn}.mp3`;
     })
 })

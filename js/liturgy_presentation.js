@@ -13,13 +13,15 @@ let music = document.querySelector(".music");
 let music_path = "images/liturgie/";
 let audio_path = "audio/liturgie/";
 
-let hymn_name = spev[0].getAttribute("name-value");
-let hymn = spev[0].getAttribute("data-value");
+let hymn_name 
+let hymn 
 
 (function LoadPage(){
     switch (liturgy) {
         case "jan":
             liturgia = "Liturgia sv. Jána Zlatoústeho"
+            hymn_name = spev[0].getAttribute("name-value");
+            hymn = spev[0].getAttribute("data-value");
             jan_column.style.display = "inline";
             basil_column.style.display = "none";
             vpd_column.style.display = "none";
