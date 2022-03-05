@@ -38,6 +38,9 @@ spev.forEach(tone => {
             case "kondak":
                 name = "kondák"
                 break;
+            case "bohorodicnik":
+                name = "bohorodičník"
+                break;
             case "slava":
                 name = "sláva i teraz"
                 break;
