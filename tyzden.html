@@ -90,85 +90,86 @@
         </div>
     </div>
 
-    <!-- Head -->
-    <section class="oktoich-head bg-light py-3">
+
+
+    <!-- Day of the week navigation -->
+    <section class="lit_navigation">
+        <div class="container flex bg-primary">
+            <div class="lit_option" data-value="pondelok">Pondelok</div>
+            <div class="lit_option" data-value="utorok">Utorok</div>
+            <div class="lit_option" data-value="streda">Streda</div>
+            <div class="lit_option" data-value="stvrtok">Stvrtok</div>
+            <div class="lit_option" data-value="piatok">Piatok</div>
+            <div class="lit_option" data-value="sobota">Sobota</div>
+            <div class="lit_option" data-value="zosnuli">Za zosnulých</div>
+        </div>
+    </section>
+
+    <section class="hymn_presentation">
         <div class="container grid">
-            <div>
-                <h1 class="xl">Oktoich</h1>
-                <p class="lead">
-                    Oktoich alebo osmohlasnik je súbor liturgických nápevov, ktoré boli vytvorené na každý týždeň
-                    8-týždňového
-                    obdobia, ktoré začína Paschou - Kristovým vzkriesením a trvá do sviatku Zostúpenia Svätého Ducha -
-                    Päťdesiatnice.
-                    Liturgické texty nápevov ospevujú Kristovo víťazstvo nad smrťou.
-                    Tento cyklus ôsmych nápevov, teda hlasov, sa opakuje počas celého liturgického roka, pričom nápevy
-                    sú použité aj na vyspievanie liturgických textov iných sviatkov.
-                </p>
+            
+            <div class="left-column" >
+                <div class="hymn bg-primary">
+                    <!--Normal day-->
+                    <div id="normal_day">
+                        <div class="spev" data-value="tropar" name-value='tropár'>Tropár</div>
+                        <div class="spev" data-value="kondak" name-value='kondák'>Kondák</div>
+                        <div class="spev" data-value="bohorodicnik" name-value='bohorodičník'>Bohorodičník</div>
+                        <div class="spev" data-value="prokimen" name-value='prokimen'>Prokimen</div>
+                    </div>
+
+                    <!--Streda a piatok-->
+                    <div id="streda_piatok">
+                        <div class="spev" data-value="tropar" name-value='tropár'>Tropár</div>
+                        <div class="spev" data-value="kondak" name-value='kondák'>Kondák</div>
+                        <div class="spev" data-value="prokimen" name-value='prokimen'>Prokimen</div>
+                    </div> 
+
+                    <!--Stvrtok-->
+                    <div id="stvrt">
+                        <div class="spev" data-value="tropar_apostoli" name-value='tropár apoštolom'>Tropár apoštolom</div>
+                        <div class="spev" data-value="tropar_mikulas" name-value='tropár Mikulášovi'>Tropár Mikulášovi</div>
+                        <div class="spev" data-value="kondak_apostoli" name-value='kondák apoštolom'>Kondák apoštolom</div>
+                        <div class="spev" data-value="kondak_mikulas" name-value='kondák Mikulášovi'>Kondák Mikulášovi</div>
+                        <div class="spev" data-value="bohorodicnik" name-value='bohorodičník'>Bohorodičník</div>
+                        <div class="spev" data-value="prokimen" name-value='prokimen'>Prokimen</div>               
+                    </div>
+                    
+                    <!--Za zosnulých-->
+                    <div id="zosnuli">
+                        <div class="spev" data-value="tropar" name-value='tropár'>Tropár</div>
+                        <div class="spev" data-value="kondak" name-value='kondák'>Kondák</div>
+                        <div class="spev" data-value="bohorodicnik" name-value='bohorodičník'>Bohorodičník</div>
+                        <div class="spev" data-value="prokimen" name-value='prokimen'>Prokimen</div>
+                        <div class="spev" data-value="najcistejsia_bohorodicka" name-value='Najčistejšia Bohorodička'>Najčistejšia Bohorodička</div>
+                    </div>
+
+                    <a href="http://byzantke.szm.com/noty/slov/oktoich.pdf" target="_blank" class = "btn first btn-outline download"><i class="fas fa-download"></i>   Stiahnuť noty</a>
+                    <a href="" target="_blank" class = "btn btn-outline download"><i class="fas fa-download"></i>   Stiahnuť audio</a>                
+                </div>
+            </div> 
+            
+            <div class="presentation">
+                <h1 class="title"></h1>
+                <!-- MUSIC PLAYER -->
+                <audio controls class="player">
+                    <source src="" type="audio/mpeg" >
+                    Your browser does not support the audio.
+                </audio>
+
+                <img src="" alt="Je nám ľúto. Notový záznam aktuálne nie je k dispozícii." class="music">
+
+
+
             </div>
-            <img src="images/oktoich/vzkriesenie-dark.png" alt="">
+
+
         </div>
     </section>
 
-    <!-- Sub head -->
-    <section class="oktoich-sub-head py-3">
-        <div class="container grid">
-            <img src="images/chant.jpg" alt="Picture of chant">
-            <div>
-                <h1 class="md">Hlas</h1>
-                <p>
-                    Každý hlas je tvorený liturgickými textami s konkrétnym nápevom, ktoré tvoria časti rôznych
-                    bohoslužieb dňa. Tieto časti je možné
-                    zadeliť do nasledujúcich kategórií.
-                </p>
-            </div>
-            <!--
-            <ul>
-                <li>tropár</li>
-                <li>kondák</li>
-                <li>prokimen</li>
-                <li>samohlas</li>
-                <li>podoben</li>
-                <li>utierňový prokimen</li>
-            </ul>-->
-        </div>
-    </section>
 
-    <!-- BOHOSLUZBY section -->
-    <section class="bohosluzby-order my-2">
-        <div class="container grid grid-3">
-            <div class="card flex">
-                <h4>Tropár</h4>
-                <div>
-                    <p>Je krátka ucelená hymnická skladba. Zväčša ide zhŕňa obsah sviatku či života svätého. Spieva sa na liturgii pred čítaniami,
-                    na začiatku utierne a konci večierne. </p>
-                    <p>Označuje sa tak však každá ucelená krátka skladba s istou štruktúrou (napr. tropáre v kánone, na sedalnoch, tzv. nedeľné tropáre na utierni a pod.).</p>
-                </div>
-            </div>
-            <div class="card flex">
-                <h4>Kondák</h4>
-                <div>
-                    <p>Je byzantská básnická forma, určitá poetická homília alebo kázeň. Obsahuje skôr výzvy k pokániu či konaniu dobra zamerané na poslucháča.</p>
-                </div>
-            </div>
-            <div class="card flex">
-                <h4>Prokimen</h4>
-                <p>Ide spravidla o jeden základný verš z knihy Žalmov, ktorý sa viaže k čítaniu alebo slávenému sviatku. Spieva sa pred čítaním apoštola alebo starozákonného čítania a tiež na večierni po hymne Svetlo tiché. Môže mať ešte jeden alebo viac veršov, ktoré sa vkladajú medzi opakovane spievaný základný verš.</p>
-            </div>
-            <div class="card flex">
-                <h4>Samohlas</h4>
-                <div>
-                    <p>Je hudobný nápev menlivého liturgického textu na večierni alebo utierni, ktorý sa zvyčajne označuje ako sloha, stich alebo stichira. Ku každému hlasu patrí jeden samohlas.</p>
-                </div>
-            </div>
-            <div class="card flex">
-                <h4>Podoben</h4>
-                <p>Podoben je samostatný nápev určený len pre konkrétnu stichiru, teda konkrétny liturgický text. Aj keď patrí k niektorému z hlasov a predchádza mu verš na nápev samohlasu, melodicky sa od samohlasu podstatne odlišuje.</p>
-            </div>
 
-        
-        </div>
-        
-    </section>
+
 
     <!-- Footer -->
     <footer class="footer bg-dark py-5">
@@ -194,6 +195,12 @@
             </div>
         </div>
     </footer>
+
+
+
+
+    <script src="js/tyzden_presentation.js">    
+    </script>
 
 </body>
 

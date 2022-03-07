@@ -477,7 +477,7 @@ img{
     margin: 0;
     padding: 10px;
     width: 100%;
-    line-height: 1.1rem;
+    line-height: 1.3rem;
     border-radius: 5px;
     text-align: left;
 }
@@ -523,7 +523,7 @@ img{
     width: 100%;
     border-radius:  5px 0 0 5px;
     color:var(--text-color-light);
-    line-height: 1.1rem;
+    line-height: 1.3rem;
     text-align: left;
 }
 
