@@ -1,7 +1,7 @@
 let bohosluzba = new URLSearchParams(window.location.search).get("bohosluzba");
 let vecieren_column = document.getElementById("vecieren");
 let utieren_column = document.getElementById("utieren");
-let vpd_column = document.getElementById("vpd");
+/*let vpd_column = document.getElementById("vpd");*/
 let sluzenie;
 
 var lits = document.querySelectorAll(".lit_option");
@@ -13,24 +13,26 @@ let music = document.querySelector(".music");
 let music_path = "images/bohosluzby/";
 let audio_path = "audio/bohosluzby/";
 
-let hymn_name = spev[0].getAttribute("name-value");
-let hymn = spev[0].getAttribute("data-value");
+let hymn_name 
+let hymn 
 
 (function LoadPage(){
     switch (bohosluzba) {
         case "vecieren":
             sluzenie = "Večiereň"
+            hymn_name = spev[0].getAttribute("name-value");
+            hymn = spev[0].getAttribute("data-value");
             vecieren_column.style.display = "inline";
             utieren_column.style.display = "none";
-            vpd_column.style.display = "none";
+            /*vpd_column.style.display = "none";*/
             break;
         case "utieren":
             sluzenie = "Utiereň"
-            hymn_name = "Milosť pokoja";
-            hymn = "bazil_milost_pokoja";
+            hymn_name = "Boh je Pán - 1. hlas";
+            hymn = "1_boh_je_pan";
             vecieren_column.style.display = "none";
             utieren_column.style.display = "inline";
-            vpd_column.style.display = "none";
+            /*vpd_column.style.display = "none";*/
             break;
             /*
         case "vpd":
@@ -62,15 +64,15 @@ lits.forEach(lit => {
                 hymn = spev[0].getAttribute("data-value");;
                 vecieren_column.style.display = "inline";
                 utieren_column.style.display = "none";
-                vpd_column.style.display = "none";
+                /*vpd_column.style.display = "none";*/
                 break;
             case "utieren":
                 sluzenie = "Utiereň"
-                hymn_name = "!!!Milosť pokoja";
-                hymn = "bazil_milost_pokoja";
+                hymn_name = "Boh je Pán - 1. hlas";
+                hymn = "1_boh_je_pan";
                 vecieren_column.style.display = "none";
                 utieren_column.style.display = "inline";
-                vpd_column.style.display = "none";
+                /*vpd_column.style.display = "none";*/
                 break;
                 /*
             case "vpd":
